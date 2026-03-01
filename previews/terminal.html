@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishnu Shettigar — Terminal Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0a0e0a;
+      --bg-alt:   #0f140f;
+      --surface:  #141a14;
+      --border:   #1e2a1e;
+      --green:    #4ade80;
+      --green-dim:#4ade8022;
+      --green-mid:#22c55e;
+      --text:     #d4f0d4;
+      --muted:    #6b8f6b;
+      --amber:    #fbbf24;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    /* ── Navbar ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 56px;
+      background: rgba(10,14,10,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center;
+    }
+    .nav-inner {
+      max-width: 1000px; margin: 0 auto; padding: 0 24px;
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .nav-logo::before { content: '> '; color: var(--muted); }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a {
+      font-size: 0.78rem;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-links a::before { content: './'; color: var(--border); }
+    .nav-links a:hover { color: var(--green); }
+
+    /* ── Hero ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 0 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.4;
+    }
+    .hero-inner {
+      position: relative;
+      max-width: 1000px; margin: 0 auto; width: 100%;
+    }
+    .hero-prompt {
+      color: var(--muted); font-size: 0.8rem; margin-bottom: 12px;
+    }
+    .hero-prompt span { color: var(--green); }
+    .hero-name {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .hero-name-orig {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .hero-role {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--amber);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .hero-role::before { content: '// '; color: var(--muted); }
+    .hero-tagline {
+      color: var(--muted); font-size: 0.85rem; margin-bottom: 40px;
+    }
+    .hero-tagline::before { content: '# '; color: var(--border); }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      font-weight: 500;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: #0a0e0a;
+    }
+    .btn-primary:hover { background: var(--green-mid); }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--green);
+      color: var(--green);
+    }
+    .btn-secondary:hover { background: var(--green-dim); }
+
+    /* Cursor blink */
+    .cursor {
+      display: inline-block;
+      width: 10px; height: 1.1em;
+      background: var(--green);
+      vertical-align: text-bottom;
+      margin-left: 4px;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    /* ── Section ── */
+    .section { padding: 80px 24px; }
+    .section-alt { background: var(--bg-alt); }
+    .container { max-width: 1000px; margin: 0 auto; }
+
+    .section-title {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 32px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .section-title::before { content: '##'; color: var(--green); margin-right: 4px; }
+    .section-title::after {
+      content: '';
+      flex: 1; height: 1px;
+      background: var(--border);
+    }
+
+    /* ── About ── */
+    .about-text p {
+      color: var(--muted); margin-bottom: 14px; font-size: 0.85rem; line-height: 1.8;
+    }
+    .currently-card {
+      margin-top: 20px;
+      border: 1px solid var(--green);
+      border-radius: 4px;
+      padding: 16px;
+      background: var(--green-dim);
+    }
+    .currently-card p { color: var(--text); font-size: 0.82rem; margin: 0; }
+    .currently-card p::before { content: '> '; color: var(--green); }
+
+    /* ── Skills ── */
+    .skills-grid { display: flex; flex-direction: column; gap: 20px; }
+    .skill-label {
+      color: var(--amber);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .skill-label::before { content: 'const '; color: var(--muted); }
+    .skill-label::after { content: ' = ['; color: var(--muted); }
+    .badge-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--green);
+      padding: 4px 12px;
+      font-size: 0.78rem;
+      border-radius: 2px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .badge:hover { border-color: var(--green); background: var(--green-dim); }
+
+    /* ── Timeline ── */
+    .timeline { display: flex; flex-direction: column; gap: 24px; }
+    .tcard {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .tcard-header {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .tcard-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .tcard-dot.red   { background: #f87171; }
+    .tcard-dot.amber { background: var(--amber); }
+    .tcard-dot.green { background: var(--green); }
+    .tcard-title {
+      font-size: 0.75rem; color: var(--muted);
+      margin-left: 4px; flex: 1;
+    }
+    .tcard-body { padding: 20px; }
+    .tcard-role { color: var(--green); font-size: 0.95rem; font-weight: 600; margin-bottom: 2px; }
+    .tcard-company { color: var(--amber); font-size: 0.8rem; margin-bottom: 14px; }
+    .tcard-period { font-size: 0.72rem; color: var(--muted); }
+    .tcard-bullets { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .tcard-bullets li {
+      color: var(--muted); font-size: 0.8rem; padding-left: 16px; position: relative;
+    }
+    .tcard-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--green); }
+
+    /* subrole */
+    .tsubrole + .tsubrole { border-top: 1px dashed var(--border); padding-top: 16px; margin-top: 16px; }
+    .tsubrole-header { display: flex; justify-content: space-between; margin-bottom: 10px; flex-wrap: wrap; gap: 6px; }
+    .tsubrole-title { color: var(--text); font-size: 0.85rem; font-weight: 600; }
+    .tsubrole-period { color: var(--muted); font-size: 0.72rem; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+    footer span { color: var(--green); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">vishnu-shettigar</a>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-inner">
+      <p class="hero-prompt">visitor@portfolio:~$ <span>whoami</span></p>
+      <h1 class="hero-name">Vishnu Shettigar<span class="cursor"></span></h1>
+      <p class="hero-name-orig">// Vishnumurthy — goes by Vishnu Shettigar online</p>
+      <p class="hero-role">Senior Software Engineer</p>
+      <p class="hero-tagline">7+ years · backend systems · Bangalore</p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn btn-primary">./view-work</a>
+        <a href="#contact" class="btn btn-secondary">./contact-me</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">about_me</h2>
+      <div class="about-text">
+        <p>7+ years of experience developing and maintaining software across multiple products. I'm a generalist — enjoy working across the stack, picking up new tools fast, finding patterns across domains.</p>
+        <p>Skilled in working with databases, APIs, and modern software tooling. Comfortable driving projects end-to-end or collaborating with cross-functional teams.</p>
+        <div class="currently-card">
+          <p>Having the absolute best time tinkering with <strong>Claude Code</strong> — using AI as a coding collaborator. It's changed how I think about building things.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">skills</h2>
+      <div class="skills-grid">
+        <div>
+          <p class="skill-label">languages</p>
+          <div class="badge-list">
+            <span class="badge">Python</span><span class="badge">Golang</span>
+            <span class="badge">TypeScript</span><span class="badge">Lua</span>
+          </div>
+        </div>
+        <div>
+          <p class="skill-label">frameworks</p>
+          <div class="badge-list">
+            <span class="badge">FastAPI</span><span class="badge">Flask</span>
+            <span class="badge">Asyncio</span><span class="badge">Celery</span>
+            <span class="badge">RabbitMQ</span><span class="badge">Kong</span>
+            <span class="badge">DragonflyDB</span><span class="badge">nginx</span>
+          </div>
+        </div>
+        <div>
+          <p class="skill-label">databases</p>
+          <div class="badge-list">
+            <span class="badge">PostgreSQL</span><span class="badge">MySQL</span>
+            <span class="badge">DynamoDB</span><span class="badge">Timestream</span>
+            <span class="badge">Redis</span>
+          </div>
+        </div>
+        <div>
+          <p class="skill-label">aws</p>
+          <div class="badge-list">
+            <span class="badge">S3</span><span class="badge">SNS</span>
+            <span class="badge">SQS</span><span class="badge">Lambda</span>
+            <span class="badge">API Gateway</span><span class="badge">Elasticsearch</span>
+          </div>
+        </div>
+        <div>
+          <p class="skill-label">infra</p>
+          <div class="badge-list">
+            <span class="badge">Docker</span><span class="badge">Kubernetes</span>
+            <span class="badge">Prometheus</span><span class="badge">Grafana</span>
+            <span class="badge">CI/CD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">experience</h2>
+      <div class="timeline">
+
+        <div class="tcard">
+          <div class="tcard-header">
+            <div class="tcard-dot red"></div>
+            <div class="tcard-dot amber"></div>
+            <div class="tcard-dot green"></div>
+            <span class="tcard-title">netskope_inc.sh — Aug 2023–Present</span>
+          </div>
+          <div class="tcard-body">
+            <div class="tsubrole">
+              <div class="tsubrole-header">
+                <span class="tsubrole-title">Senior Software Engineer</span>
+                <span class="tsubrole-period">May 2024 – Present</span>
+              </div>
+              <ul class="tcard-bullets">
+                <li>Leading shift from self-hosted infrastructure to AWS platform.</li>
+                <li>Led migration of audit logging service from REST to gRPC with phased traffic strategy.</li>
+              </ul>
+            </div>
+            <div class="tsubrole">
+              <div class="tsubrole-header">
+                <span class="tsubrole-title">Software Engineer</span>
+                <span class="tsubrole-period">Aug 2023 – Apr 2024</span>
+              </div>
+              <ul class="tcard-bullets">
+                <li>API Gateway team — interface for all customer-facing APIs on multi-tenant architecture.</li>
+                <li>Reduced p99 latency by 90% (500ms → 60ms).</li>
+                <li>Improved logging and traceability across services.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcard">
+          <div class="tcard-header">
+            <div class="tcard-dot red"></div>
+            <div class="tcard-dot amber"></div>
+            <div class="tcard-dot green"></div>
+            <span class="tcard-title">signeasy.sh — Aug 2021–Jul 2023</span>
+          </div>
+          <div class="tcard-body">
+            <p class="tcard-role">Software Engineer</p>
+            <ul class="tcard-bullets">
+              <li>Multiple microservices for E-Signature platform — APIs and backend services.</li>
+              <li>Migrated notification service to serverless pub-sub (SNS, SQS, Lambda).</li>
+              <li>Serverless event-driven Usage Reports system (SQS, Lambda, Timestream, API Gateway).</li>
+              <li>Revamped team management microservice.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tcard">
+          <div class="tcard-header">
+            <div class="tcard-dot red"></div>
+            <div class="tcard-dot amber"></div>
+            <div class="tcard-dot green"></div>
+            <span class="tcard-title">verloop_io.sh — Nov 2020–Jul 2021</span>
+          </div>
+          <div class="tcard-body">
+            <p class="tcard-role">Software Engineer</p>
+            <ul class="tcard-bullets">
+              <li>Helped customers go live with chatbot integrations.</li>
+              <li>3rd party API and CRM integrations.</li>
+              <li>Automated manual tasks, improving efficiency by 90%.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>visitor@portfolio:~$ <span>echo "© 2026 Vishnu Shettigar"</span></p>
+  </footer>
+
+</body>
+</html>
