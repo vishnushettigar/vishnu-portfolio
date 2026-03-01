@@ -57,7 +57,7 @@ ul { list-style: none; }
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  margin-bottom: 8px;
+  margin-bottom: 32px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -68,6 +68,7 @@ ul { list-style: none; }
 .section-comment {
   font-size: 0.78rem;
   color: var(--muted);
+  margin-top: -20px;
   margin-bottom: 28px;
   opacity: 0.6;
 }
@@ -272,6 +273,7 @@ ul { list-style: none; }
 .currently-card {
   margin-top: 20px;
   border: 1px solid var(--green-mid);
+  border-radius: 4px;
   padding: 16px;
   background: var(--green-dim);
 }
@@ -330,6 +332,7 @@ ul { list-style: none; }
 .tcard {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-radius: 4px;
   overflow: hidden;
   transition: border-color 0.2s;
 }
