@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishnumurthy Shettigar — Software Engineer</title>
+  <meta name="description" content="Software Engineer specializing in scalable backend systems. 4+ years of experience in Python, Golang, microservices, and AWS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">VS</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#personal">Personal</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Vishnumurthy Shettigar</h1>
+      <h2 class="hero-title">Software Engineer</h2>
+      <p class="hero-tagline">Building scalable backend systems &middot; 4+ years &middot; Bangalore</p>
+      <div class="hero-ctas">
+        <a href="#experience" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a backend-focused Software Engineer with 4+ years of experience building
+            scalable, production-grade systems. I specialise in Python and Golang, with a
+            strong background in microservices architecture, RESTful APIs, and cloud
+            infrastructure on AWS.
+          </p>
+          <p>
+            I've worked across document management, conversational AI, and SaaS products,
+            shipping features that serve thousands of users. I care about clean code,
+            system reliability, and keeping things simple where possible.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="highlight-icon">&#128187;</span>
+            <div>
+              <strong>4+ Years</strong>
+              <span>Professional Experience</span>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">&#9881;</span>
+            <div>
+              <strong>Microservices</strong>
+              <span>Distributed Systems</span>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">&#9729;</span>
+            <div>
+              <strong>AWS</strong>
+              <span>Cloud Infrastructure</span>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">&#128200;</span>
+            <div>
+              <strong>Backend</strong>
+              <span>APIs &amp; Databases</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <p class="timeline-company">Signeasy &middot; Bangalore</p>
+              </div>
+              <span class="timeline-period">Aug 2021 – Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed and maintained backend microservices powering Signeasy's document signing platform, serving enterprise and SMB customers globally.</li>
+              <li>Built scalable REST APIs in Python (Flask/FastAPI) integrated with PostgreSQL, Redis, and AWS services (S3, SQS, SNS, Lambda).</li>
+              <li>Led migration of legacy monolithic modules to event-driven microservices, improving system resilience and deployment independence.</li>
+              <li>Implemented audit trail and compliance features for enterprise workflows, ensuring HIPAA and SOC 2 alignment.</li>
+              <li>Optimised slow database queries and introduced caching strategies with Redis, reducing P95 latency significantly.</li>
+              <li>Contributed to observability improvements using Elasticsearch, Kibana, and Grafana dashboards for production monitoring.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Development Engineer</h3>
+                <p class="timeline-company">verloop.io &middot; Bangalore</p>
+              </div>
+              <span class="timeline-period">Nov 2020 – Jul 2021</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Developed backend services for verloop.io's conversational AI platform, enabling businesses to automate customer support at scale.</li>
+              <li>Built integrations with third-party CRMs and messaging channels (WhatsApp, web chat) using Golang microservices.</li>
+              <li>Worked on real-time messaging infrastructure with RabbitMQ, ensuring low-latency delivery of chat events.</li>
+              <li>Collaborated on NLP pipeline integrations and bot configuration APIs used by non-technical customers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <p class="timeline-company">Mangalore Infotech Solutions &middot; Mangalore</p>
+              </div>
+              <span class="timeline-period">Jul 2018 – Nov 2020</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built full-stack web applications for domestic clients across e-commerce, healthcare, and logistics domains.</li>
+              <li>Developed Django-based backends with MySQL, handling data management, reporting, and REST API design.</li>
+              <li>Automated client data workflows using Python scripts, reducing manual processing time.</li>
+              <li>Gained foundational experience in software delivery, client communication, and agile processes.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Languages</h3>
+          <div class="badge-list">
+            <span class="badge">Python</span>
+            <span class="badge">Golang</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Frameworks</h3>
+          <div class="badge-list">
+            <span class="badge">Flask</span>
+            <span class="badge">FastAPI</span>
+            <span class="badge">Django</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Databases</h3>
+          <div class="badge-list">
+            <span class="badge">PostgreSQL</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">DynamoDB</span>
+            <span class="badge">Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">AWS</h3>
+          <div class="badge-list">
+            <span class="badge">Lambda</span>
+            <span class="badge">API Gateway</span>
+            <span class="badge">SQS</span>
+            <span class="badge">SNS</span>
+            <span class="badge">S3</span>
+            <span class="badge">EC2</span>
+            <span class="badge">Timestream</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Infra &amp; Tools</h3>
+          <div class="badge-list">
+            <span class="badge">Docker</span>
+            <span class="badge">Kubernetes</span>
+            <span class="badge">Elasticsearch</span>
+            <span class="badge">Kibana</span>
+            <span class="badge">Grafana</span>
+            <span class="badge">RabbitMQ</span>
+            <span class="badge">Celery</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-card">
+        <div class="edu-icon">&#127979;</div>
+        <div class="edu-details">
+          <h3>Bachelor of Engineering — Computer Science</h3>
+          <p class="edu-institution">Visvesvaraya Technological University (VTU)</p>
+          <p class="edu-meta">Belgaum, Karnataka &middot; 2014 – 2018</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONAL -->
+  <section id="personal" class="section">
+    <div class="container">
+      <h2 class="section-title">Personal</h2>
+      <p class="section-subtitle">A little more about me beyond the code.</p>
+      <div class="personal-grid">
+
+        <div class="personal-card">
+          <div class="personal-icon">&#127918;</div>
+          <h3>Hobbies &amp; Interests</h3>
+          <p class="coming-soon">Coming soon</p>
+        </div>
+
+        <div class="personal-card">
+          <div class="personal-icon">&#9992;</div>
+          <h3>Travel &amp; Adventures</h3>
+          <p class="coming-soon">Coming soon</p>
+        </div>
+
+        <div class="personal-card">
+          <div class="personal-icon">&#128161;</div>
+          <h3>Side Projects</h3>
+          <p class="coming-soon">Coming soon</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+      <div class="contact-links">
+        <a href="mailto:vishnushettigar709@gmail.com" class="contact-link">
+          <span class="contact-icon">&#9993;</span>
+          <span>vishnushettigar709@gmail.com</span>
+        </a>
+        <a href="#" class="contact-link contact-placeholder" aria-label="GitHub (coming soon)">
+          <span class="contact-icon">&#128279;</span>
+          <span>GitHub <em>(coming soon)</em></span>
+        </a>
+        <a href="#" class="contact-link contact-placeholder" aria-label="LinkedIn (coming soon)">
+          <span class="contact-icon">&#128101;</span>
+          <span>LinkedIn <em>(coming soon)</em></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Vishnumurthy Shettigar. All rights reserved.</p>
+      <p class="footer-built">Built with HTML, CSS &amp; JS &mdash; deployed on Hostinger.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
