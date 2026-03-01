@@ -4,110 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vishnu Shettigar — Senior Software Engineer</title>
-  <meta name="description" content="Senior Software Engineer with 7+ years of experience building scalable backend systems. Python, Golang, TypeScript. Currently at Netskope." />
+  <meta name="description" content="Senior Software Engineer with 7+ years building scalable backend systems. Python, Golang, TypeScript. Currently at Netskope." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">VS</a>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">vishnu-shettigar</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#personal">Personal</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#personal">personal</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <p class="hero-greeting">Hi, I'm</p>
+    <div class="hero-grid-bg"></div>
+    <div class="hero-inner">
+      <p class="hero-prompt">visitor@portfolio:~$ <span>whoami</span></p>
       <h1 class="hero-name">
-        Vishnu Shettigar
-        <span class="hero-name-original">
-          (Vishnumurthy)
-          <span class="name-tooltip">My given name is Vishnumurthy. I go by Vishnu Shettigar online since most platforms require a last name.</span>
-        </span>
+        Vishnu Shettigar<span class="cursor"></span>
       </h1>
-      <h2 class="hero-title">Senior Software Engineer</h2>
-      <p class="hero-tagline">Building scalable backend systems &middot; 7+ years &middot; Bangalore</p>
-      <div class="hero-ctas">
-        <a href="#experience" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      <p class="hero-name-orig">// Vishnumurthy — goes by Vishnu Shettigar online</p>
+      <p class="hero-role">Senior Software Engineer</p>
+      <p class="hero-tagline">7+ years · backend systems · generalist · Bangalore</p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn btn-primary">./view-work</a>
+        <a href="#contact" class="btn btn-secondary">./contact-me</a>
       </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-arrow"></div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section id="about" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+      <h2 class="section-title">about_me.md</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>
-            I have 7+ years of experience developing and maintaining software applications
-            across multiple products. Skilled in working with databases, APIs, and modern
-            software development tooling.
-          </p>
-          <p>
-            I'm a generalist — I enjoy working across the stack, picking up new tools fast,
-            and finding patterns across domains rather than staying deep in one lane.
-            Collaborating with cross-functional teams comes naturally, and I'm equally
-            comfortable driving things end-to-end solo.
-          </p>
+          <p>7+ years of experience developing and maintaining software across multiple products. I'm a generalist — enjoy working across the stack, picking up new tools fast, finding patterns across domains.</p>
+          <p>Skilled in working with databases, APIs, and modern software tooling. Comfortable driving projects end-to-end or collaborating with cross-functional teams.</p>
           <div class="currently-card">
-            <span class="currently-dot"></span>
-            <div class="currently-body">
-              <span class="currently-label">Currently</span>
-              <p>Having the absolute best time tinkering with <strong>Claude Code</strong> — using AI as a coding collaborator, not just a tool. It's changed how I think about building things.</p>
-            </div>
+            <span class="currently-label"># status</span>
+            <p>Having the absolute best time tinkering with <strong>Claude Code</strong> — using AI as a coding collaborator. It's changed how I think about building things.</p>
           </div>
         </div>
         <div class="about-highlights">
           <div class="highlight-card">
-            <span class="highlight-icon">&#128187;</span>
-            <div>
-              <strong>7+ Years</strong>
-              <span>Professional Experience</span>
-            </div>
+            <span class="hl-key">experience</span>
+            <span class="hl-val">7+ years</span>
           </div>
           <div class="highlight-card">
-            <span class="highlight-icon">&#9881;</span>
-            <div>
-              <strong>Microservices</strong>
-              <span>Distributed Systems</span>
-            </div>
+            <span class="hl-key">focus</span>
+            <span class="hl-val">backend</span>
           </div>
           <div class="highlight-card">
-            <span class="highlight-icon">&#9729;</span>
-            <div>
-              <strong>AWS</strong>
-              <span>Cloud Infrastructure</span>
-            </div>
+            <span class="hl-key">style</span>
+            <span class="hl-val">generalist</span>
           </div>
           <div class="highlight-card">
-            <span class="highlight-icon">&#128200;</span>
-            <div>
-              <strong>Backend</strong>
-              <span>APIs &amp; Databases</span>
-            </div>
+            <span class="hl-key">cloud</span>
+            <span class="hl-val">AWS</span>
           </div>
         </div>
       </div>
@@ -115,78 +84,71 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="section section-alt">
+  <section id="experience" class="section">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title">experience.log</h2>
       <div class="timeline">
 
-        <!-- Netskope — two roles at same company -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-role">Netskope Inc</h3>
-                <p class="timeline-company">Netskope &middot; Bangalore</p>
+        <div class="tcard">
+          <div class="tcard-header">
+            <div class="tcard-dot red"></div>
+            <div class="tcard-dot amber"></div>
+            <div class="tcard-dot green"></div>
+            <span class="tcard-title">netskope_inc.sh &mdash; Aug 2023&ndash;Present</span>
+          </div>
+          <div class="tcard-body">
+            <div class="tsubrole">
+              <div class="tsubrole-header">
+                <span class="tsubrole-title">Senior Software Engineer</span>
+                <span class="tsubrole-period">May 2024 – Present</span>
               </div>
-              <span class="timeline-period">Aug 2023 – Present</span>
-            </div>
-
-            <div class="timeline-subrole">
-              <div class="timeline-subrole-header">
-                <span class="timeline-subrole-title">Senior Software Engineer</span>
-                <span class="timeline-subrole-period">May 2024 – Present</span>
-              </div>
-              <ul class="timeline-bullets">
-                <li>Leading the shift from self-hosted infrastructure to the AWS platform.</li>
-                <li>Led the migration of the audit logging service from REST APIs to gRPC protocol with a phased traffic migration strategy.</li>
+              <ul class="tcard-bullets">
+                <li>Leading shift from self-hosted infrastructure to the AWS platform.</li>
+                <li>Led migration of audit logging service from REST APIs to gRPC with a phased traffic migration strategy.</li>
               </ul>
             </div>
-
-            <div class="timeline-subrole">
-              <div class="timeline-subrole-header">
-                <span class="timeline-subrole-title">Software Engineer</span>
-                <span class="timeline-subrole-period">Aug 2023 – Apr 2024</span>
+            <div class="tsubrole">
+              <div class="tsubrole-header">
+                <span class="tsubrole-title">Software Engineer</span>
+                <span class="tsubrole-period">Aug 2023 – Apr 2024</span>
               </div>
-              <ul class="timeline-bullets">
-                <li>Part of the API Gateway team acting as the interface for all customer-facing backend APIs on a multi-tenant architecture.</li>
-                <li>Optimized API Gateway latency, reducing p99 response time by 90% (from 500ms to 60ms).</li>
+              <ul class="tcard-bullets">
+                <li>Part of the API Gateway team — interface for all customer-facing backend APIs on a multi-tenant architecture.</li>
+                <li>Optimized API Gateway latency, reducing p99 response time by 90% (500ms → 60ms).</li>
                 <li>Worked on improving logging and traceability across services.</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-role">Software Engineer</h3>
-                <p class="timeline-company">Signeasy &middot; Bangalore</p>
-              </div>
-              <span class="timeline-period">Aug 2021 – Jul 2023</span>
-            </div>
-            <ul class="timeline-bullets">
-              <li>Worked on multiple microservices for the E-Signature platform, designing APIs and building backend services.</li>
-              <li>Migrated the user notification service from a microservice pattern to a serverless pub-sub architecture using AWS SNS, SQS, and Lambda.</li>
+        <div class="tcard">
+          <div class="tcard-header">
+            <div class="tcard-dot red"></div>
+            <div class="tcard-dot amber"></div>
+            <div class="tcard-dot green"></div>
+            <span class="tcard-title">signeasy.sh &mdash; Aug 2021&ndash;Jul 2023</span>
+          </div>
+          <div class="tcard-body">
+            <p class="tcard-role">Software Engineer</p>
+            <ul class="tcard-bullets">
+              <li>Worked on multiple microservices for the E-Signature platform — designing APIs and building backend services.</li>
+              <li>Migrated user notification service from microservice pattern to serverless pub-sub architecture using AWS SNS, SQS, and Lambda.</li>
               <li>Built a completely serverless event-driven system to gather Usage Reports using SQS, Lambda, Timestream (NoSQL timeseries DB), and API Gateway.</li>
               <li>Revamped the microservice handling all team management features of Signeasy.</li>
             </ul>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-role">Software Engineer</h3>
-                <p class="timeline-company">verloop.io &middot; Bangalore</p>
-              </div>
-              <span class="timeline-period">Nov 2020 – Jul 2021</span>
-            </div>
-            <ul class="timeline-bullets">
+        <div class="tcard">
+          <div class="tcard-header">
+            <div class="tcard-dot red"></div>
+            <div class="tcard-dot amber"></div>
+            <div class="tcard-dot green"></div>
+            <span class="tcard-title">verloop_io.sh &mdash; Nov 2020&ndash;Jul 2021</span>
+          </div>
+          <div class="tcard-body">
+            <p class="tcard-role">Software Engineer</p>
+            <ul class="tcard-bullets">
               <li>Part of the team helping customers go live with chatbot integration.</li>
               <li>Worked extensively on integrating 3rd party APIs and CRM integrations.</li>
               <li>Gained experience in GCP log/metric monitoring and worked on optimising backend services using Flask.</li>
@@ -195,17 +157,16 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-role">Software Engineer</h3>
-                <p class="timeline-company">Mangalore Infotech Solutions (Unicourt India) &middot; Mangalore</p>
-              </div>
-              <span class="timeline-period">Jul 2018 – Nov 2020</span>
-            </div>
-            <ul class="timeline-bullets">
+        <div class="tcard">
+          <div class="tcard-header">
+            <div class="tcard-dot red"></div>
+            <div class="tcard-dot amber"></div>
+            <div class="tcard-dot green"></div>
+            <span class="tcard-title">mangalore_infotech.sh &mdash; Jul 2018&ndash;Nov 2020</span>
+          </div>
+          <div class="tcard-body">
+            <p class="tcard-role">Software Engineer &mdash; Mangalore Infotech Solutions (Unicourt India)</p>
+            <ul class="tcard-bullets">
               <li>Used ETL methodology to index data and make it searchable for clients using ManticoreSearch, an open-source full-text search engine.</li>
               <li>Optimised the ETL algorithm, improving indexing performance by as much as 50%.</li>
               <li>Improved REST API performance by 40% using asyncio.</li>
@@ -221,134 +182,115 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section">
+  <section id="skills" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
+      <h2 class="section-title">skills.json</h2>
       <div class="skills-grid">
-
         <div class="skill-group">
-          <h3 class="skill-group-title">Languages</h3>
+          <p class="skill-label">languages</p>
           <div class="badge-list">
-            <span class="badge">Python</span>
-            <span class="badge">Golang</span>
-            <span class="badge">TypeScript</span>
-            <span class="badge">Lua</span>
+            <span class="badge">Python</span><span class="badge">Golang</span>
+            <span class="badge">TypeScript</span><span class="badge">Lua</span>
           </div>
         </div>
-
         <div class="skill-group">
-          <h3 class="skill-group-title">Frameworks &amp; Libraries</h3>
+          <p class="skill-label">frameworks</p>
           <div class="badge-list">
-            <span class="badge">FastAPI</span>
-            <span class="badge">Flask</span>
-            <span class="badge">Asyncio</span>
-            <span class="badge">Celery</span>
-            <span class="badge">RabbitMQ</span>
-            <span class="badge">Kong</span>
-            <span class="badge">DragonflyDB</span>
-            <span class="badge">nginx</span>
+            <span class="badge">FastAPI</span><span class="badge">Flask</span>
+            <span class="badge">Asyncio</span><span class="badge">Celery</span>
+            <span class="badge">RabbitMQ</span><span class="badge">Kong</span>
+            <span class="badge">DragonflyDB</span><span class="badge">nginx</span>
           </div>
         </div>
-
         <div class="skill-group">
-          <h3 class="skill-group-title">Databases</h3>
+          <p class="skill-label">databases</p>
           <div class="badge-list">
-            <span class="badge">PostgreSQL</span>
-            <span class="badge">MySQL</span>
-            <span class="badge">DynamoDB</span>
-            <span class="badge">Timestream</span>
+            <span class="badge">PostgreSQL</span><span class="badge">MySQL</span>
+            <span class="badge">DynamoDB</span><span class="badge">Timestream</span>
             <span class="badge">Redis</span>
           </div>
         </div>
-
         <div class="skill-group">
-          <h3 class="skill-group-title">AWS</h3>
+          <p class="skill-label">aws</p>
           <div class="badge-list">
-            <span class="badge">S3</span>
-            <span class="badge">SNS</span>
-            <span class="badge">SQS</span>
-            <span class="badge">Lambda</span>
-            <span class="badge">API Gateway</span>
-            <span class="badge">Elasticsearch</span>
+            <span class="badge">S3</span><span class="badge">SNS</span>
+            <span class="badge">SQS</span><span class="badge">Lambda</span>
+            <span class="badge">API Gateway</span><span class="badge">Elasticsearch</span>
           </div>
         </div>
-
         <div class="skill-group">
-          <h3 class="skill-group-title">Infra &amp; Tools</h3>
+          <p class="skill-label">infra</p>
           <div class="badge-list">
-            <span class="badge">Docker</span>
-            <span class="badge">Kubernetes</span>
-            <span class="badge">Prometheus</span>
-            <span class="badge">Grafana</span>
+            <span class="badge">Docker</span><span class="badge">Kubernetes</span>
+            <span class="badge">Prometheus</span><span class="badge">Grafana</span>
             <span class="badge">CI/CD</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- EDUCATION -->
-  <section id="education" class="section section-alt">
+  <section id="education" class="section">
     <div class="container">
-      <h2 class="section-title">Education</h2>
-      <div class="edu-card">
-        <div class="edu-icon">&#127979;</div>
-        <div class="edu-details">
-          <h3>Bachelor of Engineering — Computer Science</h3>
-          <p class="edu-institution">Visvesvaraya Technological University (VTU)</p>
-          <p class="edu-meta">Belgaum, Karnataka &middot; 2014 – 2018</p>
+      <h2 class="section-title">education.txt</h2>
+      <div class="tcard">
+        <div class="tcard-header">
+          <div class="tcard-dot red"></div>
+          <div class="tcard-dot amber"></div>
+          <div class="tcard-dot green"></div>
+          <span class="tcard-title">degree.sh &mdash; 2014&ndash;2018</span>
+        </div>
+        <div class="tcard-body">
+          <p class="tcard-role">Bachelor of Engineering &mdash; Computer Science</p>
+          <p class="tcard-company">Visvesvaraya Technological University (VTU) &middot; Belgaum, Karnataka</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PERSONAL -->
-  <section id="personal" class="section">
+  <section id="personal" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Personal</h2>
-      <p class="section-subtitle">A little more about me beyond the code.</p>
+      <h2 class="section-title">personal.sh</h2>
+      <p class="section-comment"># beyond the code — more coming soon</p>
       <div class="personal-grid">
-
         <div class="personal-card">
-          <div class="personal-icon">&#127918;</div>
-          <h3>Hobbies &amp; Interests</h3>
-          <p class="coming-soon">Coming soon</p>
+          <p class="personal-card-title">> hobbies &amp; interests</p>
+          <p class="personal-card-body coming-soon">// coming soon</p>
         </div>
-
         <div class="personal-card">
-          <div class="personal-icon">&#9992;</div>
-          <h3>Travel &amp; Adventures</h3>
-          <p class="coming-soon">Coming soon</p>
+          <p class="personal-card-title">> travel &amp; adventures</p>
+          <p class="personal-card-body coming-soon">// coming soon</p>
         </div>
-
         <div class="personal-card">
-          <div class="personal-icon">&#128161;</div>
-          <h3>Side Projects</h3>
-          <p class="coming-soon">Coming soon</p>
+          <p class="personal-card-title">> side projects</p>
+          <p class="personal-card-body coming-soon">// coming soon</p>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section section-alt">
+  <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-subtitle">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
-      <div class="contact-links">
-        <a href="mailto:vishnushettigar709@gmail.com" class="contact-link">
-          <span class="contact-icon">&#9993;</span>
-          <span>vishnushettigar709@gmail.com</span>
+      <h2 class="section-title">contact.sh</h2>
+      <p class="section-comment"># have something to say? run one of these</p>
+      <div class="contact-list">
+        <a href="mailto:vishnushettigar709@gmail.com" class="contact-item">
+          <span class="contact-cmd">$ open</span>
+          <span class="contact-label">email</span>
+          <span class="contact-val">vishnushettigar709@gmail.com</span>
         </a>
-        <a href="https://github.com/vishnushettigar" target="_blank" rel="noopener noreferrer" class="contact-link">
-          <span class="contact-icon">&#128279;</span>
-          <span>github.com/vishnushettigar</span>
+        <a href="https://github.com/vishnushettigar" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <span class="contact-cmd">$ open</span>
+          <span class="contact-label">github</span>
+          <span class="contact-val">github.com/vishnushettigar</span>
         </a>
-        <a href="https://www.linkedin.com/in/vishnu-shettigar-16045155/" target="_blank" rel="noopener noreferrer" class="contact-link">
-          <span class="contact-icon">&#128101;</span>
-          <span>linkedin.com/in/vishnu-shettigar</span>
+        <a href="https://www.linkedin.com/in/vishnu-shettigar-16045155/" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <span class="contact-cmd">$ open</span>
+          <span class="contact-label">linkedin</span>
+          <span class="contact-val">linkedin.com/in/vishnu-shettigar</span>
         </a>
       </div>
     </div>
@@ -357,8 +299,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Vishnu Shettigar. All rights reserved.</p>
-      <p class="footer-built">Built with HTML, CSS &amp; JS &mdash; auto-deployed via GitHub Actions.</p>
+      <p>visitor@portfolio:~$ <span>echo "&copy; 2026 Vishnu Shettigar — auto-deployed via GitHub Actions"</span></p>
     </div>
   </footer>
 
