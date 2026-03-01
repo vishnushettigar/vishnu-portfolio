@@ -354,11 +354,17 @@ ul { list-style: none; }
 .tcard-dot.red   { background: #f87171; }
 .tcard-dot.amber { background: var(--amber); }
 .tcard-dot.green { background: var(--green); }
-.tcard-title {
-  font-size: 0.72rem;
-  color: var(--muted);
+.tcard-company-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
   margin-left: 4px;
   flex: 1;
+}
+.tcard-period {
+  font-size: 0.72rem;
+  color: var(--muted);
+  flex-shrink: 0;
 }
 
 .tcard-body { padding: 20px 22px; }
@@ -371,7 +377,8 @@ ul { list-style: none; }
 }
 .tcard-company {
   color: var(--amber);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
+  font-weight: 500;
   margin-bottom: 14px;
 }
 
