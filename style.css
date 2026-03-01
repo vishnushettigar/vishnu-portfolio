@@ -561,6 +561,45 @@ ul {
   background: var(--accent);
 }
 
+/* Sub-roles (multiple positions at same company) */
+.timeline-subrole {
+  margin-bottom: 20px;
+}
+
+.timeline-subrole:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-subrole + .timeline-subrole {
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.timeline-subrole-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.timeline-subrole-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.timeline-subrole-period {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 9px;
+  white-space: nowrap;
+}
+
 /* ============================================================
    Skills
    ============================================================ */
